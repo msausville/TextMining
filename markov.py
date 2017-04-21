@@ -76,17 +76,12 @@ def smushit(markovdict, megalist):
     capitals = filter(lambda x: x.lower() != x, megalist)
     word = choice(list(capitals))
     finallist.append(word)
-    while not word.endswith("."):
-        word = choice(markovdict[word])
-        finallist.append(word)
-#        words = []
-#        for k, v in next_word.items():
-#            words.append(k)
-    #         probs.append(v)
-    #
-    #     nxt = choice(words, p=probs)
-    # finallist.append(nxt)
-    return " ".join(finallist)
+    print(markovdict)
+    print(word)
+    # while not word.endswith("."):
+    #     word = choice(markovdict[word])
+    #     finallist.append(word)
+    # return " ".join(finallist)
 
 if __name__ == "__main__":
     x = markov(megalist)
